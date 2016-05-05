@@ -1,0 +1,21 @@
+---
+
+nginx_remove_default_vhost: true
+
+nginx_vhosts:
+  - listen: "80 default_server"
+    server_name: "{{ app_servername }}"
+    root: "{{ app_root }}/public"
+    index: "index.php index.html index.htm"
+    extra_parameters: |
+
+      error_page 404 /index.php;
+
+      location ~ \.php$ {
+        fastcgi_split_path_info ^(.+\.php)(/.+)$;
+        fastcgi_pass 127.0.0.1:9000;
+        fastcgi_index index.php;
+        include fastcgi_params;
+      }
+
+

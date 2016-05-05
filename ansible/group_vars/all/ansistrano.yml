@@ -1,0 +1,14 @@
+---
+
+ansistrano_deploy_from: "{{ app_source }}"
+ansistrano_deploy_to: "{{ app_root }}"
+ansistrano_keep_releases: 3
+
+# Method used to deliver the code to the server. Options are copy, rsync, git or s3
+ansistrano_deploy_via: "git"
+# GIT pull strategy
+ansistrano_git_repo: "{{ app_repo }}"
+ansistrano_git_branch: master
+ansistrano_git_identity_key_path: "~/.ssh/id_rsa.pub"
+
+ansistrano_allow_anonymous_stats: no

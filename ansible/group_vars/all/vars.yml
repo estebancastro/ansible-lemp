@@ -1,0 +1,42 @@
+---
+
+#
+# App Settings
+#
+app_name: app
+app_servername: "{{app_name}}.dev"
+app_ip: IP_HERE
+app_source: "../src/"
+app_root: "/srv/www/{{app_name}}"
+app_repo: git@github.com:USERNAME/REPO.git
+
+
+
+
+
+#
+# Users
+#
+deployuser_username: deploy
+deployuser_password: DEPLOYUSER_PASSWORD_HERE (sha-512)
+deployuser_sshkey1: DEPLOYUSER_SSHKEY_HERE
+
+
+
+
+
+#
+# MySQL
+#
+mysql_root_password: MYSQL_ROOT_PASSWORD_HERE
+
+
+
+
+
+#
+# Database
+#
+database_name: "{{ app_name }}"
+database_username: "{{ deployuser_username }}"
+database_password: DATABASE_PASSWORD_HERE

@@ -1,0 +1,11 @@
+---
+
+users:
+  - username: "{{ deployuser_username }}"
+    name: "{{ deployuser_username }}"
+    groups: [ "{{ deployuser_username }}", "sudo" ]
+    uid: 1002
+    password: "{{ deployuser_password }}"
+    ssh_key:
+      - "{{ deployuser_sshkey1 }}"
+      - "{{ deployuser_sshkey2 }}"

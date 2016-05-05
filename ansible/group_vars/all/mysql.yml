@@ -1,0 +1,21 @@
+---
+
+mysql_user_home: /root
+mysql_root_username: root
+mysql_root_password: "{{ mysql_root_password }}"
+
+# Set this to `yes` to forcibly update the root password.
+mysql_root_password_update: yes
+
+# Databases.
+mysql_databases:
+  - name: "{{ database_name }}"
+    collation: utf8_unicode_ci
+    encoding: utf8
+    replicate: 1
+
+# Users.
+mysql_users:
+  - name: "{{ database_username }}"
+    password: "{{ database_password }}"
+    priv: "{{ database_name }}.*:ALL"

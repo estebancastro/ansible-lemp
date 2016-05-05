@@ -1,0 +1,29 @@
+ # Documentation: http://docs.ansible.com/ansible/galaxy.html
+
+- src: https://github.com/mivok/ansible-users.git
+  version: master
+  name: mivok0.users
+
+- src: https://github.com/telusdigital/ansible-fish.git
+  version: master
+  name: telusdigital.fish
+
+- src: https://github.com/geerlingguy/ansible-role-nginx
+  version: 1.9.0
+  name: geerlingguy.nginx
+
+- src: https://github.com/geerlingguy/ansible-role-mysql
+  version: 2.2.1
+  name: geerlingguy.mysql
+
+- src: https://github.com/geerlingguy/ansible-role-php
+  version: 2.0.3
+  name: geerlingguy.php
+
+- src: https://github.com/geerlingguy/ansible-role-php-mysql
+  version: 1.2.0
+  name: geerlingguy.php-mysql
+
+- src: https://github.com/ansistrano/deploy.git
+  version: 1.5.0
+  name: carlosbuenosvinos.ansistrano-deploy

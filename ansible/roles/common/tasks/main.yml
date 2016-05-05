@@ -1,0 +1,14 @@
+---
+
+- name: update/upgrade APT
+  apt:
+    update_cache=yes
+    upgrade=safe
+    cache_valid_time=1800
+
+- name: Install system packages
+  apt:
+    name={{ item }}
+    state=latest
+  with_items:
+    "{{ system_packages }}"

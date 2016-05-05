@@ -1,0 +1,8 @@
+# file: ansible/hosts
+
+[local]
+app_development    ansible_user=vagrant    ansible_host=127.0.0.1    ansible_port=2222    ansible_ssh_pass=vagrant
+
+[digitalocean]
+app_production    ansible_user=root    ansible_host=000.000.000.000
+app_staging       ansible_user=root    ansible_host=000.000.000.000

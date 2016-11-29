@@ -59,11 +59,3 @@ Thumbs.db
 /ansible/*.retry
 /ansible/roles/*
 !/ansible/roles/common
-
-# Components #
-##############
-/src/bower_components
-/node_modules
-
-# App #
-#######
